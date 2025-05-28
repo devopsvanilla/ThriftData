@@ -3,6 +3,7 @@
 ## 🎯 Mapa Estratégico
 
 ### 1. **Visão**
+![image](https://github.com/user-attachments/assets/0a9c7a40-8723-4aab-b252-7779d71960d6)
 
 Ser a plataforma referência em transformar dados técnicos de cloud em inteligência financeira, promovendo decisões ágeis e otimização de custos.
 
