@@ -2,6 +2,7 @@
 # ThriftData
 
 ## Visão Geral
+![Logo](https://github.com/user-attachments/assets/a523f69b-fcd8-4947-9825-a0f406b4b72e)
 
 ThriftData é uma stack modular para coleta, análise e visualização de dados operacionais e financeiros em ambientes multi-cloud e on-prem. Foco em FinOps, observabilidade e governança, integrando automação, machine learning e consulta natural com LLMs.
 
