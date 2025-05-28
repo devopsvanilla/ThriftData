@@ -38,6 +38,7 @@ Capacitar CFOs, gestores e times técnicos a alcançar eficiência financeira e 
 * **Linux Foundation** (networking, padrões abertos)
 * **Cloud Native Computing Foundation (CNCF)** (contribuição e certificações)
 * **Open Cost** (projeto CNCF para observabilidade de custos cloud)
+* **Microsoft** [ISV Success Program](https://www.microsoft.com/en-us/isv/isv-success)
 
 **🔗 Provedores de Cloud:**
 
