@@ -94,8 +94,7 @@ Diversidade e abrangência são essenciais para capturar dados relevantes:
 
 ### Arquitetura da solução
 
-https://www.mermaidchart.com/app/projects/8e5b2941-2da3-4e1c-82bc-d083720921ed/diagrams/9899d941-c9c9-4c6b-b4ba-e72ee08fcbe7/version/v0.1/edit
-
+[Componentes OSS](https://www.mermaidchart.com/raw/9899d941-c9c9-4c6b-b4ba-e72ee08fcbe7?theme=light&version=v0.1&format=svg)
 ---
 
 ## Benefícios da Stack
