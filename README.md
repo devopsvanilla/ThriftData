@@ -94,7 +94,92 @@ Diversidade e abrangência são essenciais para capturar dados relevantes:
 
 ### Arquitetura da solução
 
-- [Componentes OSS](https://www.mermaidchart.com/raw/7d28a1c3-c8ba-4fc4-84a4-aecfc817eb18?theme=light&version=v0.1&format=svg)
+```mermaid
+flowchart TD
+ subgraph Fontes_de_Informacao["Fontes_de_Informacao"]
+        F1["Sistemas Administrativos e ERP"]
+        F2["Logs de uso erros e metricas de servidores aplicacoes e servicos"]
+        F3["Informacoes de faturamento de servicos em nuvens e terceiros"]
+        F4["Metricas de workloads - K8s VMs containers"]
+        F5["Dados de orquestracao e pipelines CI_CD"]
+        F6["Logs de seguranca e compliance"]
+        F7["Contratos e SLAs"]
+        F8["Inventario de ativos e recursos - CMDB"]
+        F9["Dados financeiros e contabeis integrados"]
+        F10["Metricas de rede e trafego detalhadas"]
+        F11["Utilizacao de software e licenciamento"]
+  end
+ subgraph Coleta_Multi_cloud_e_On_Prem["Coleta_Multi_cloud_e_On_Prem"]
+        A["OpenTelemetry - coleta unificada"]
+        B["Steampipe - consultas SQL de APIs"]
+        C["Cloud Custodian - automacao"]
+        D["CloudQuery - coleta de Billing APIs"]
+  end
+ subgraph Normalizacao["Normalizacao"]
+        E["Airflow e n8n - Orquestracao ETL"]
+        F["dbt - Transformacao modelo FOCUS e Cost Model"]
+  end
+ subgraph Armazenamento["Armazenamento"]
+        G["Data Lake ou Graph DB - PostgreSQL Neo4j ChromaDB"]
+  end
+ subgraph Machine_Learning["Machine_Learning"]
+        H["Kubeflow ou MLFlow - modelagem e anomalias"]
+  end
+ subgraph Custos_Multiambiente["Custos_Multiambiente"]
+        I["Kubecost ou OpenCost - Kubernetes"]
+        J["FinOps Dashboards - Multi cloud Billing e Cost Allocation"]
+  end
+ subgraph Visualizacao["Visualizacao"]
+        K["Superset - dashboards e NLQ via Semantic Layer e AI Agents"]
+        L["Metabase - dashboards e NLQ via Ask Metabase"]
+        M["Grafana - alertas e visualizacao"]
+  end
+ subgraph Consulta_Natural["Consulta_Natural"]
+        N["LangChain e LlamaIndex - NLQ e RAG com LLM"]
+  end
+ subgraph Paines_Administrativos["Paines_Administrativos"]
+        O["React Admin - gestao de acessos interfaces e controle centralizado"]
+  end
+ subgraph Seguranca["Seguranca"]
+        P["HashiCorp Vault - cofre de segredos"]
+        Q["MinIO - armazenamento seguro e criptografado"]
+  end
+    F1 --> A
+    F2 --> A
+    F3 --> D
+    F4 --> A
+    F5 --> E
+    F6 --> C
+    F7 --> J
+    F8 --> G
+    F9 --> J
+    F10 --> D
+    F11 --> J
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+    E --> F & P
+    F --> G & P
+    G --> H & I & J & N & Q
+    H --> K & L & P
+    I --> M & P
+    J --> K & L & P
+    N --> K & L & M
+    O --> E & F & G & H & I & J & K & L & M & N
+
+    classDef coleta fill:#DDF,stroke:#333,stroke-width:2px
+    classDef normalizacao fill:#FDD,stroke:#333,stroke-width:2px
+    classDef armazenamento fill:#DFD,stroke:#333,stroke-width:2px
+    classDef ml fill:#FFD,stroke:#333,stroke-width:2px
+    classDef custos fill:#FDF,stroke:#333,stroke-width:2px
+    classDef visualizacao fill:#CDF,stroke:#333,stroke-width:2px
+    classDef nlq fill:#FCF,stroke:#333,stroke-width:2px
+    classDef admin fill:#DEF,stroke:#333,stroke-width:2px
+    classDef seguranca fill:#F9F,stroke:#333,stroke-width:2px
+    classDef fontes fill:#FF9,stroke:#333,stroke-width:2px
+    style Custos_Multiambiente color:#000000
+```
 
 ## Benefícios da Stack
 
