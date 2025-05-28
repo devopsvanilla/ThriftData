@@ -1,4 +1,6 @@
 # ThriftData MVP
+![Logo](https://github.com/user-attachments/assets/0bfab118-46cc-4b89-a14a-8cb0f57dbacf)
+
 
 ## 🎯 Mapa Estratégico
 
